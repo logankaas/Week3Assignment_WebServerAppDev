@@ -1,0 +1,51 @@
+@Assignment2-WebServerAppDev_HostAddress = https://localhost:7214
+@Assignment2_WebServerAppDev_HostAddress = http://localhost:5168
+@WebApiHost = https://localhost:7214
+
+# LOGAN KAAS - 1/16/2024
+# returns all hobbies
+GET {{WebApiHost}}/api/hobbies
+
+###
+
+# returns specified hobbies
+GET {{WebApiHost}}/api/hobbies/1
+
+###
+
+# creates new hobby
+POST {{WebApiHost}}/api/hobbies
+Content-Type: application/json
+
+{
+  "firstName": "Logan",
+  "lastName": "Kaas",
+  "favoriteHobby": "Skiing"
+}
+
+###
+
+# update current hobby
+PUT {{WebApiHost}}/api/hobbies/1
+Content-Type: application/json
+
+{
+  "hobbyId": 1,
+  "firstName": "Logan K",
+  "lastName": "Kaas",
+  "favoriteHobby": "Skiing"
+}
+
+###
+
+DELETE {{WebApiHost}}/api/hobbies/1
+Content-Type: application/json
+
+{
+  "hobbyId": 1,
+  "firstName": "Logan",
+  "lastName": "Kaas",
+  "favoriteHobby": "Skiing"
+}
+
+###

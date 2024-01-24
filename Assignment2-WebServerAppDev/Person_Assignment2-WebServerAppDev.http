@@ -1,0 +1,49 @@
+﻿@Assignment2-WebServerAppDev_HostAddress = https://localhost:7214
+@WebApiHost = https://localhost:7214
+
+# LOGAN KAAS - 1/16/2024
+# returns all people
+GET {{WebApiHost}}/api/person
+
+###
+
+# returns specified people
+GET {{WebApiHost}}/api/person/1
+
+###
+
+# creates new person
+POST {{WebApiHost}}/api/person
+Content-Type: application/json
+
+{
+  "firstName": "Logan",
+  "lastName": "Kaas",
+  "birthDate": "2003-02-19"
+}
+
+###
+
+PUT {{WebApiHost}}/api/person/1
+Content-Type: application/json
+
+{
+  "personId": 1,
+  "firstName": "Logan",
+  "lastName": "Kaas",
+  "birthDate": "2003-02-19"
+}
+
+###
+
+DELETE {{WebApiHost}}/api/person/1
+Content-Type: application/json
+
+{
+  "personId": 1,
+  "firstName": "Logan",
+  "lastName": "Kaas",
+  "birthDate": "2003-02-19"
+}
+
+###
